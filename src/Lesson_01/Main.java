@@ -5,7 +5,7 @@ public class Main {
       Team team = new Team("Гризли");
       Course course = new Course();
 
-      team.teamInfo();
+      team.teamInfo(team.getTeamName());
         System.out.println("----------------------------------------------------------");
         course.doIt(team.players);
         System.out.println("----------------------------------------------------------");

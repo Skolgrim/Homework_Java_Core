@@ -12,8 +12,12 @@ public class Team {
         this.teamName = teamName;
     }
 
-    public void teamInfo () {
-        System.out.print("Состав команды: ");
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void teamInfo (String teamName) {
+        System.out.print("Состав команды " + teamName + ": ");
         for(int i = 0; i < players.length; i++) {
             System.out.print(players[i]);
             if (i != players.length - 1) {
