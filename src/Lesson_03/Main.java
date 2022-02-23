@@ -3,7 +3,9 @@ package Lesson_03;
 public class Main {
     public static void main (String[] args) {
         Apple[] apples = new Apple[10];
+        Apple[] apples1 = new Apple[10];
         Orange[] oranges = new Orange[10];
+        Orange[] oranges1 = new Orange[10];
 
         Apple apple1 = new Apple();
         Apple apple2 = new Apple();
@@ -42,6 +44,12 @@ public class Main {
 
         System.out.println(appleBox.compare(orangeBox));
         System.out.println(appleBox.compare(appleBox));
+
+        Box<Apple> emptyAppleBox1 = new Box<>(apples1);
+        emptyAppleBox1.shift(appleBox);
+
+        System.out.println("Вес коробки: " + appleBox.getWeight());
+        System.out.println("Вес коробки: " + emptyAppleBox1.getWeight());
 
     }
 }

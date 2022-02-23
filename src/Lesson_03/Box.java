@@ -19,8 +19,15 @@ public class Box <T extends Fruit> {
         return totalWeight;
     }
 
-    public Boolean compare (Box<? extends Fruit> box) {
+    public Boolean compare(Box<? extends Fruit> box) {
         if (this.getWeight() == box.getWeight()) return true;
         return false;
+    }
+
+    public void shift(Box<T> box) {
+        for (int i = 0; i < list.length; i++) {
+                this.list[i] = box.list[i];
+                box.list[i] = null;
+        }
     }
 }
